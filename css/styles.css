@@ -1,67 +1,73 @@
 /* Your Website Styles */
-body{
-background:#D9CB9E;
+h2{
+  color:#DC3522;
 }
-
-.container{
-  background:#DC3522;
+h1{
+  color:#DC3522;
 }
 
 /* Gallery Stying */
-.gallery .control-button {
-  color: #ccc;
-  color: rgba(255, 255, 255, 0.4);
+@import url(http://fonts.googleapis.com/css?family=Istok+Web);
+
+
+@-webkit-keyframes slidy {
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
 }
 
-.gallery .control-button:hover {
-  color: white;
-  color: rgba(255, 255, 255, 0.8);
+
+
+@keyframes slidy {
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+body, figure { 
+  margin: 0; 
+  background:#374140;
+  font-family: 'Hammersmith One',sans-serif;
+  font-weight: 100;
+}
+div#captioned-gallery { 
+  width: 100%; overflow: hidden; 
+}
+figure.slider { 
+  position: relative; width: 500%;
+  font-size: 0;
+
+  -webkit-animation: 20s slidy infinite;
+   animation: 20s slidy infinite; 
 }
 
-/*
-	Theme controls how everything looks in Gallery CSS.
-*/
-.gallery {
-  position: relative;
+figure.slider figure { 
+  width: 20%; height: auto;
+  display: inline-block;  position: inherit; 
 }
-.gallery .item {
-  height: 600px;
-  overflow: hidden;
-  text-align: center;
-  background: #374140;
-}
-.gallery .controls {
-  position: absolute;
-  bottom: -284px;
+figure.slider img { width: 100%; height: auto; }
+figure.slider figure figcaption { 
+  position: absolute; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  color:#D9CB9E ; 
   width: 100%;
-  text-align: center;
-}
-
-.gallery .controls img {
-  border: 5px solid #2A2C2B;
-  margin:10% auto 0 auto;
-
-  transform:perspective(300px) rotateY(45deg)scaleZ(.5);
-  transition: transform 1s;
-}
-
-div:hover{
-  transform:rotateY(0);
-  animate:transform 1s;
-}
-
-.gallery .control-button {
-  display: inline-block;
-  margin: 0 .02em;
-  font-size: 3em;
-  text-align: center;
-  text-decoration: none;
-  transition: color .1s;
+  font-size: 2rem;
+   padding: .6rem; 
+  font-family: 'Hammersmith One', sans-serif;
 }
 
 
 
-/* Show Grid */
-.showgrid {
-	background: url("../img/grid-bg.png") repeat-y;
-}
+
+
+
+
