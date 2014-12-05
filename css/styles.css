@@ -1,6 +1,11 @@
 /* Your Website Styles */
+body{
+background:#D9CB9E;
+}
 
-
+.container{
+  background:#DC3522;
+}
 
 /* Gallery Stying */
 .gallery .control-button {
@@ -20,20 +25,29 @@
   position: relative;
 }
 .gallery .item {
-  height: 400px;
+  height: 600px;
   overflow: hidden;
   text-align: center;
-  background: #4d87e2;
+  background: #374140;
 }
 .gallery .controls {
   position: absolute;
-  bottom: -120px;
+  bottom: -284px;
   width: 100%;
   text-align: center;
 }
 
 .gallery .controls img {
-  border: 5px solid #000;
+  border: 5px solid #2A2C2B;
+  margin:10% auto 0 auto;
+
+  transform:perspective(300px) rotateY(45deg)scaleZ(.5);
+  transition: transform 1s;
+}
+
+div:hover{
+  transform:rotateY(0);
+  animate:transform 1s;
 }
 
 .gallery .control-button {
@@ -44,6 +58,7 @@
   text-decoration: none;
   transition: color .1s;
 }
+
 
 
 /* Show Grid */
